@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "questiontext": "What is the full form of HTML?",
+      "options": [
+        "Hyper Text Markup Language.",
+        "Hyper text Modal Language.",
+        "Hyper Text Module Language.",
+        "Hyper Text Mark Language."
+      ],
+      "correctanswer": "Hyper Text Markup Language.",
+      "category": "HTML.",
+      "id": "1"
+    },
+    {
+      "questiontext": "What is the full form of CSS?",
+      "options": [
+        "Cascading Style Sheet",
+        "Cascading Show Sheet",
+        "Cascading Store Sheet",
+        "Cascading Short Sheet"
+      ],
+      "correctanswer": "Cascading Style Sheet",
+      "category": "CSS",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "questiontext": "Who is making the Web standards?",
+      "options": [
+        "Google",
+        "Mozilla",
+        "Microsoft",
+        "The World Wide Web Consortium"
+      ],
+      "correctanswer": "The World Wide Web Consortium?",
+      "category": "Web Standards"
+    },
+    {
+      "id": "4",
+      "questiontext": "What is the correct HTML element for inserting a line break?",
+      "options": [
+        "<lb>",
+        "<break>",
+        "<br>",
+        "<line>"
+      ],
+      "correctanswer": "<br>",
+      "category": "HTML"
+    },
+    {
+      "id": "5",
+      "questiontext": "Choose the correct HTML element for the largest heading:",
+      "options": [
+        "<heading>",
+        "<h6>",
+        "<head>",
+        "<h1>"
+      ],
+      "correctanswer": "<h1>",
+      "category": "HTML"
+    },
+    {
+      "questiontext": "what is the HTML tag for table",
+      "options": [
+        "<table>",
+        "<tb>",
+        "<td>",
+        "<tr>"
+      ],
+      "correctanswer": "<table>",
+      "category": "CSS",
+      "id": "7d4f"
+    }
+  ]
+}
