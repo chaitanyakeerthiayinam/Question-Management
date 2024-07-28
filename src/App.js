@@ -1,14 +1,16 @@
 import './App.css';
-import {Route, Routes } from 'react-router-dom';
+import {Route, Routes, Navigate } from 'react-router-dom';
 import Menu from './Components/Menu';
 import Footer from './Components/Footer';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useContext } from 'react';
 
 const Home=lazy(()=>import('./Components/Home'));
 const CreateQuestion=lazy(()=> import('./Components/CreateQuestion'));
 const UpdateQuestion=lazy(()=> import('./Components/UpdateQuestion'));
 const ListQuestion=lazy(()=> import('./Components/ListQuestions'));
 const ReadQuestion=lazy(()=> import('./Components/ReadQuestion'));
+const CategoryQuestions = lazy(() => import('./Components/CategoryQuestions')); 
+
 
 
 function App() {
@@ -23,14 +25,16 @@ function App() {
             </div>
         </div>
         }>
+    
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/createquestion" element={<CreateQuestion/>}></Route>
         <Route path="/updatequestion/:id" element={<UpdateQuestion/>}></Route>
         <Route path="/listquestions" element={<ListQuestion/>}></Route>
         <Route path="/readquestion/:id" element={<ReadQuestion/>}></Route>
-        
+        <Route path="/category/:category" element={<CategoryQuestions />}></Route>    
       </Routes>
+     
       </Suspense>
       <Footer/>
     </div>

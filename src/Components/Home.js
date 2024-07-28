@@ -1,4 +1,4 @@
-function Home() {
+/*function Home() {
     return (
       <>
   
@@ -109,5 +109,86 @@ function Home() {
     );
   }
   
-  export default Home;
+  export default Home;*/
+
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+
+function Home() {
+  const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  const fetchCategories = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/questions');
+      const questions = response.data;
+
+      const uniqueCategories = [ 
+        ...new Set(questions.map((question) => question.category)),
+      ];
+
+      setCategories(uniqueCategories);
+    } catch (error) {
+      console.error('Error fetching categories', error);
+    }
+  };
+
+  return (
+    <>
+      <header style={{
+        position: 'relative',
+        padding: '20px 0',
+        background: 'linear-gradient(90deg, rgba(136, 45, 179, 1) 0%, rgba(237, 144, 250, 1) 100%)',
+        color: '#fff',
+        textAlign: 'center',
+        fontSize: '36px',
+        fontWeight: 'bold',
+        fontFamily: 'Arial, sans-serif',
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
+        borderRadius: '10px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      }}>
+        <h1>Let's Learn Something New Everyday</h1>
+      </header>
+
+      <div className="container my-5">
+        <div className="row">
+          {categories.map((category) => (
+            <div className="col-md-4 mb-4" key={category}>
+              <div className="card" onClick={() => navigate(`/category/${category}`)} style={{ cursor: 'pointer' }}>
+                <div className="card-body">
+                  <h5 className="card-title" style={{
+                    background: 'linear-gradient(90deg, rgba(136, 45, 179, 1) 0%, rgba(237, 144, 250, 1) 100%)',
+                    color: '#fff',
+                    textAlign: 'center',
+                    padding: '20px 0',
+                    fontSize: '24px',
+                    fontWeight: 'bold',
+                    fontFamily: 'Arial, sans-serif',
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                  }}>
+                    {category}
+                  </h5>
+                  <p className="card-text">Explore questions related to {category}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Home;
+
   

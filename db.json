@@ -9,7 +9,7 @@
         "Hyper Text Mark Language."
       ],
       "correctanswer": "Hyper Text Markup Language.",
-      "category": "HTML.",
+      "category": "CSS",
       "id": "1"
     },
     {
@@ -61,6 +61,7 @@
       "category": "HTML"
     },
     {
+      "id": "acf8",
       "questiontext": "what is the HTML tag for table",
       "options": [
         "<table>",
@@ -69,8 +70,27 @@
         "<tr>"
       ],
       "correctanswer": "<table>",
-      "category": "CSS",
-      "id": "7d4f"
+      "category": "HTML"
+    }
+  ],
+  "user": [
+    {
+      "username": "admin",
+      "password": "admin@123",
+      "role": "admin",
+      "id": "142c"
+    },
+    {
+      "username": "user1",
+      "password": "user@123",
+      "role": "user",
+      "id": "940f"
+    },
+    {
+      "id": "6aa2",
+      "username": "admin",
+      "password": "admin@123",
+      "role": "admin"
     }
   ]
 }

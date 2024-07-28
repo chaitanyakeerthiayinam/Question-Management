@@ -15,6 +15,7 @@ function Menu(){
             <Link className="nav-link active" aria-current="page" to="/"><li className="nav-item" style={{"marginRight":30, "color":"white", "fontWeight":600}}>Home</li></Link>
             <Link className="nav-link active"  aria-current="page" to="/listquestions"><li className="nav-item" style={{"marginRight":30, "color":"white", "fontWeight":600}}>Questions</li></Link>
             <Link className="nav-link active" aria-current="page" to="/createquestion"><li className="nav-item" style={{"marginRight":30, "color":"white", "fontWeight":600}}>AddQuestion</li></Link>
+            
             </ul>
         </div>
         </div>
